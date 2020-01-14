@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+</head>
+
+<body>
+
+<!--result box and copy button-->
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="result container">
+            <span id="result"></span>
+            <button class="btn" id="clipboard">
+                <i class="far fa-clipboard"></i>
+            </button> 
+        </div>
+    <div class="options">
+        <label>Length</label>
+        <input type="number" id="length" min="8" max="128">
+    </div> 
+    <h2> Must include:</h2>
+    <div class="options">
+        <label>Lowercase Letters</label>
+        <input type="checkbox" id="lowercase">
+    </div>
+    <div class="options">
+        <label>Uppercase Letters</label>
+        <input type="checkbox" id="uppercase" >
+    </div>
+    <div class="options">
+        <label>Numbers</label>
+        <input type="checkbox" id="number">
+    </div>
+    <div class="options">
+        <label>Symbol</label>
+        <input type="checkbox" id="symbol">
+    </div>
+    <button class="btn btn-large" id="generate">
+        Create Password
+    </button>
+    </div>
+
+
+<script type="text/javascript">
+
+var randomFunction = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol
+}
+
+function getRandomLower () {
+    return String.fromCharCode(Math.floor (Math.random()*26 +97));
+}
+    console.log (getRandomLower())
+
+function getRandomUpper () {
+    return String.fromCharCode(Math.floor (Math.random()*26 +65));
+}
+    console.log (getRandomUpper())
+
+function getRandomNumber () {
+    return String.fromCharCode(Math.floor (Math.random()*10 +48));
+}
+    console.log (getRandomNumber())
+
+function getRandomSymbol () {
+    const symbols = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+    return symbols[Math.floor(Math.random() * symbols.length)];
+}
+    console.log (getRandomSymbol())
+
+</script>
+</body>
+</html>
