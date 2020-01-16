@@ -14,6 +14,23 @@ var randomFunction = {
     symbol: getRandomSymbol
 }
 
+// copy to clipboard 
+clipboard.addEventListener('click', () => {
+	var text = document.createElement('textarea');
+	var password = resultEl.innerText;
+	
+    if(!password) 
+     {return;}
+	
+	text.value = password;
+	document.body.appendChild(text);
+	text.select();
+	document.execCommand('copy');
+	text.remove();
+	alert('Password copied!');
+});
+
+
 // Generate event listener
 generateEl.addEventListener ("click", () => {
     var length = +lengthEl.value;
@@ -51,7 +68,6 @@ function generatePassword(lowercase, uppercase, number, symbol, length) {
     var finalPassword = generatedPassword
         return finalPassword
 }
-
 
 // Random Functions
 function getRandomLower () {
