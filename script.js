@@ -46,11 +46,11 @@ generateEl.addEventListener ("click", () => {
 function generatePassword(lowercase, uppercase, number, symbol, length) {
     let generatedPassword = '';
     var typesCount = lowercase + uppercase + number + symbol;
-        // console.log('typesCount: ', typesCount);
+        console.log('typesCount: ', typesCount);
 
     var typesArr = [{lowercase}, {uppercase}, {number}, {symbol}].filter(item => Object.values(item)[0]);
    
-        // console.log('typesArr: ', typesArr)
+        console.log('typesArr: ', typesArr)
     
     if(typesCount === 0) {
         return '';
@@ -60,7 +60,7 @@ function generatePassword(lowercase, uppercase, number, symbol, length) {
         typesArr.forEach(type => {
             var funcName = Object.keys(type)[0];
 
-        // console.log('funcName: ', funcName);
+        console.log('funcName: ', funcName);
 
         generatedPassword += randomFunction[funcName]();
         });

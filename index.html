@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Password Generator</title>
 </head>
 
@@ -16,14 +17,15 @@
         <div class="result container">
             <span id="result"></span>
             <button class="btn" id="clipboard">
-                <i class="far fa-clipboard"></i>
+                <i class="far fa-clipboard"><img src="./assets/images/download.png" height="20" width="20"></i>
             </button> 
         </div>
+        <h2>Choose length of password:</h2>
     <div class="options">
-        <label>Length</label>
+        <label>Length:</label>
         <input type="number" id="length" min="8" max="128">
     </div> 
-    <h2> Must include:</h2>
+    <h2> Must include the following:</h2>
     <div class="options">
         <label>Lowercase Letters</label>
         <input type="checkbox" id="lowercase">
