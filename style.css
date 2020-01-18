@@ -1,27 +1,33 @@
- .container{
-    background-color:lightgray;
-    margin: 50px 200px;
+body {
+    background-image: url(./assets/images/photo-1574797914072-46cc7da9b5aa.jpeg);
+} 
+
+#main{
+    background-color: #FED9C0;
     text-align: center;
 }
 
 h1 {
     font-size: 50px;
+    padding-top: 20px;
 }
 
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
  }
 
- .result.container {
-    background-color: white;
-    width: 25%;
-    margin: 30px 0px 30px 350px;
- }
- #clipboard.btn {
-     background-color: white;
-     margin-left: 280px;
+ .result{
+    background-color: whitesmoke;
+    max-width: 100% -40rem;
+    
  }
 
+ #clipboard.btn {
+     background-color: white;
+     
+ }
+
+ 
  .options {
      font-size: 20px;
  }
